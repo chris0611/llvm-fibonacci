@@ -1,5 +1,5 @@
 CC = clang
-CFLAGS = -g -O3 `llvm-config --cflags --ldflags --libs --system-libs orcjit core native`
+CFLAGS = -g -O3 -Wall -Wextra -Wpedantic `llvm-config --cflags --ldflags --libs --system-libs orcjit core native`
 
 all: fibonacci
 

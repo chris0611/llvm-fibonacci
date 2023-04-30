@@ -82,7 +82,7 @@ int main(int argc, const char *argv[])
     LLVMContextRef ctx = LLVMContextCreate();
     LLVMModuleRef test_mod = LLVMModuleCreateWithNameInContext("test", ctx);
 
-    LLVMValueRef fib_func = create_fib_func(test_mod, ctx);
+    create_fib_func(test_mod, ctx);
     LLVMPrintModuleToFile(test_mod, "fib.ll", NULL);
 
     LLVMOrcLLJITRef lljit;
